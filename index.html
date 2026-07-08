@@ -236,13 +236,13 @@ body{
 .closing h2{font-family:'Bebas Neue',sans-serif;font-size:48px;letter-spacing:3px;color:var(--white);line-height:1;margin-bottom:14px;position:relative;}
 .closing h2 span{color:var(--red);}
 .closing p{font-size:15px;color:var(--muted);max-width:520px;margin:0 auto 30px;line-height:1.7;}
-@keyframes pulse-btn { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } } .cta-btn{
+.cta-btn{
   display:inline-block;background:var(--red);color:#fff;
   font-family:'Barlow Condensed',sans-serif;font-weight:800;
   font-size:15px;letter-spacing:3px;text-transform:uppercase;
   padding:15px 36px;text-decoration:none;margin-bottom:30px;
   clip-path:polygon(0 0,95% 0,100% 20%,100% 100%,5% 100%,0 80%);
- animation: pulse-btn 2s infinite; }
+}
 .cta-note{font-size:12px;color:var(--muted);letter-spacing:1px;}
 .offer-box{background:var(--black);border:2px solid var(--red);padding:26px 30px;text-align:left;position:relative;max-width:580px;margin:30px auto 0;}
 .offer-tag{position:absolute;top:-11px;left:22px;background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:3px 11px;}
@@ -312,7 +312,7 @@ body{
   .qw-act{font-size:11px;}
   .closing h2{font-size:28px;}
   .closing p{font-size:14px;}
-  @keyframes pulse-btn { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } } .cta-btn{font-size:13px;padding:13px 22px; animation: pulse-btn 2s infinite; }
+  .cta-btn{font-size:13px;padding:13px 22px;}
   .offer-price{font-size:28px;}
   #total-display{font-size:44px;}
   .cover-stats{gap:14px;}
@@ -659,5 +659,16 @@ function recalc(section){
   }
 }
 </script>
+
+<style>
+@keyframes cta-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+.cta-btn {
+  animation: cta-pulse 1.5s infinite ease-in-out !important;
+}
+</style>
 </body>
 </html>
